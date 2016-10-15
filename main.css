@@ -20,6 +20,9 @@ div {
   background-color: #373737;
   padding: 30px
 }
+li{
+  color: white;
+}
 
 .presentation{
 }
