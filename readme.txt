@@ -1,7 +1,6 @@
 
 ==================================
-Meu site pessoal.
-Agradecimentos: Styleshout :)
+http://www.erickapsilva.github.io
 ==================================
 
   
