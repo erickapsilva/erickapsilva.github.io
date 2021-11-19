@@ -237,7 +237,7 @@ function positionObject(position, z) {
     //console.log("position2 ", position);
     var factor = 50;
     var pos = new THREE.Vector3().copy(theModel.position);
-    var target = new THREE.Vector3(position.x, position.y);
+    var target = new THREE.Vector3(position.x, position.y - 0.2);
     theModel.position.copy(target);
 }
 
@@ -270,7 +270,7 @@ function scaleRing(coords) {
     //Exponential approximation
     //var factor = 3.8 * (1 + 2.3) ** distance;
     //Linear approximation
-    var factor = 1.5 * distance + 1.05;
+    var factor = 0.98 * distance + 0.01;
     var new_scale = new THREE.Vector3(factor, factor, factor);
     console.log("aaaa", theModel.scale.x);
     theModel.scale.copy(new_scale);
