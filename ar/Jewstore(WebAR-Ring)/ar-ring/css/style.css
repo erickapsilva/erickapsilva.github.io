@@ -136,7 +136,7 @@ body {
     top: 25px;
     width: 50px;
     height: 50px;
-    background-color: #9bffaf;
+    background-color: #996833;
     animation: flip 1s infinite;
 }
 
@@ -237,4 +237,17 @@ body {
     
     top: 0;
     
+}
+/* picker */
+
+.video-options {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+
+.container-adjustment{
+    padding-left: 0 !important;
+    margin-right: 0;
+    margin-left: 0;
 }

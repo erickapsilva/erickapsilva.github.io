@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <!-- Imporant meta information to make the page as rigid as possible on mobiles, to avoid unintentional zooming on the page itself  -->
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/ar-page.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!-- Favicon -->
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+
+    <title>Jewstore</title>
+
+</head>
+
+<body>
+    <!-- The loading element overlays all else until the model is loaded, at which point we remove this element from the DOM -->
+    <div class="loading" id="js-loader">
+        <div class="loader"></div>
+        <div class="quote">
+            <p1>Jewstore - AR Experience</p1>
+        </div>
+    </div>
+
+
+    <div class="wrapper">
+        <!-- The canvas element is used to draw the 3D scene -->
+        <canvas id="c"></canvas>
+    </div>
+
+    <div class="container container-adjustment">
+        <video class="input_video"></video>
+        <canvas class="output_canvas"></canvas>
+    </div>
+
+    <div>
+        <a href="../index.html" class="back-button"><i class="fa fa-arrow-left"></i> &nbsp Back</a>
+    </div>
+    
+    <!-- cards to choose ring-->
+    <div class="container-ar">
+
+        <div class="card">
+          <div class="imgBx">
+            <img src="../images/itens/goldring.png">
+          </div>
+          <div class="contentBx">
+            <h2>Gold Ring</h2>
+            <div class="size">
+              <h3>Price :</h3>
+              <span>$4699</span>
+            </div>
+            <br>
+            <a href="gold-ring.html"><i class="fa fa-cube"></i> Try AR Now!</a>
+          </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<!-- The main three.js file -->
+<script src='https://unpkg.com/three@0.127.0/build/three.js'></script>
+
+<!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+<script src='https://cdn.jsdelivr.net/gh/mrdoob/three.js@r92/examples/js/loaders/GLTFLoader.js'></script>
+<!-- This brings in the ability to load custom 3D objects in the .gltf file format. Blender allows the ability to export to this format out the box -->
+<script src='https://cdn.jsdelivr.net/npm/three@0.133.0/examples/js/loaders/RGBELoader.js'></script>
+<!-- This is a simple to use extension for three.js that activates all the rotating, dragging and zooming controls we need for both mouse and touch, there isn't a clear CDN for this that I can find -->
+<script src='https://threejs.org/examples/js/controls/OrbitControls.js'></script>
+<!-- HDR -->
+<script src='https://cdn.jsdelivr.net/npm/three@0.133.0/examples/js/utils/RoughnessMipmapper.js'></script>
+
+
+<!-- partial -->
+<script type="module" src="js/blue-ring.js"></script>
+
+<script src="https://threejsfundamentals.org/threejs/resources/threejs/r102/js/lights/RectAreaLightUniformsLib.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.3.1632795355/hands.js" crossorigin="anonymous"></script>
